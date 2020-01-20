@@ -1,6 +1,6 @@
 //
 //  RaceViewController.swift
-//  ClubspeedLapTimer
+//  PurpleLaps
 //
 //  Created by Mikhail Kalugin on 4/26/18.
 //  Copyright © 2018 Mikhail Kalugin. All rights reserved.

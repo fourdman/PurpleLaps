@@ -1,6 +1,6 @@
 //
 //  Leaderboard+JSON.swift
-//  ClubspeedLapTimer
+//  PurpleLaps
 //
 //  Created by Mikhail Kalugin on 1/19/20.
 //  Copyright © 2020 Mikhail Kalugin. All rights reserved.

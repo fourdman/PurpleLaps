@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ClubspeedLapTimer
+//  PurpleLaps
 //
 //  Created by Mikhail Kalugin on 4/25/18.
 //  Copyright © 2018 Mikhail Kalugin. All rights reserved.
@@ -30,7 +30,7 @@ public class MainViewController: UITableViewController {
 
   public override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Lap timer"
+    self.title = "Purple Laps for LMK Fremont"
   }
   
   public override func numberOfSections(in tableView: UITableView) -> Int {

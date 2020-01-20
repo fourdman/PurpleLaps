@@ -27,7 +27,7 @@
 		5C5B889623D4BB4C0050C89D /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		5C5B889F23D4C29F0050C89D /* ClubspeedWebKitDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubspeedWebKitDataSourceProvider.swift; sourceTree = "<group>"; };
 		5C5B88A523D4CA7B0050C89D /* Leaderboard+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Leaderboard+JSON.swift"; sourceTree = "<group>"; };
-		5C63BB3F209192E1008EE12F /* ClubspeedLapTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClubspeedLapTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C63BB3F209192E1008EE12F /* Purple Laps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Purple Laps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C63BB42209192E1008EE12F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C63BB44209192E1008EE12F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5C63BB49209192E1008EE12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		5C63BB36209192E1008EE12F = {
 			isa = PBXGroup;
 			children = (
-				5C63BB41209192E1008EE12F /* ClubspeedLapTimer */,
+				5C63BB41209192E1008EE12F /* PurpleLaps */,
 				5C63BB40209192E1008EE12F /* Products */,
 				5C63BB5820919EC9008EE12F /* Frameworks */,
 			);
@@ -122,12 +122,12 @@
 		5C63BB40209192E1008EE12F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C63BB3F209192E1008EE12F /* ClubspeedLapTimer.app */,
+				5C63BB3F209192E1008EE12F /* Purple Laps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C63BB41209192E1008EE12F /* ClubspeedLapTimer */ = {
+		5C63BB41209192E1008EE12F /* PurpleLaps */ = {
 			isa = PBXGroup;
 			children = (
 				5C5B889523D4BA8A0050C89D /* App */,
@@ -137,7 +137,7 @@
 				5C63BB4B209192E1008EE12F /* LaunchScreen.storyboard */,
 				5C63BB4E209192E1008EE12F /* Info.plist */,
 			);
-			path = ClubspeedLapTimer;
+			path = PurpleLaps;
 			sourceTree = "<group>";
 		};
 		5C63BB5820919EC9008EE12F /* Frameworks */ = {
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C63BB3E209192E1008EE12F /* ClubspeedLapTimer */ = {
+		5C63BB3E209192E1008EE12F /* PurpleLaps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C63BB51209192E1008EE12F /* Build configuration list for PBXNativeTarget "ClubspeedLapTimer" */;
+			buildConfigurationList = 5C63BB51209192E1008EE12F /* Build configuration list for PBXNativeTarget "PurpleLaps" */;
 			buildPhases = (
 				5C63BB3B209192E1008EE12F /* Sources */,
 				5C63BB3C209192E1008EE12F /* Frameworks */,
@@ -163,9 +163,9 @@
 			);
 			dependencies = (
 			);
-			name = ClubspeedLapTimer;
-			productName = ClubspeedLapTimer;
-			productReference = 5C63BB3F209192E1008EE12F /* ClubspeedLapTimer.app */;
+			name = PurpleLaps;
+			productName = PurpleLaps;
+			productReference = 5C63BB3F209192E1008EE12F /* Purple Laps.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +183,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5C63BB3A209192E1008EE12F /* Build configuration list for PBXProject "ClubspeedLapTimer" */;
+			buildConfigurationList = 5C63BB3A209192E1008EE12F /* Build configuration list for PBXProject "PurpleLaps" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -196,7 +196,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C63BB3E209192E1008EE12F /* ClubspeedLapTimer */,
+				5C63BB3E209192E1008EE12F /* PurpleLaps */,
 			);
 		};
 /* End PBXProject section */
@@ -366,13 +366,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y97DFR8V5C;
-				INFOPLIST_FILE = ClubspeedLapTimer/Info.plist;
+				INFOPLIST_FILE = PurpleLaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.ClubspeedLapTimer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.PurpleLaps;
+				PRODUCT_NAME = "Purple Laps";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,13 +384,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y97DFR8V5C;
-				INFOPLIST_FILE = ClubspeedLapTimer/Info.plist;
+				INFOPLIST_FILE = PurpleLaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.ClubspeedLapTimer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.PurpleLaps;
+				PRODUCT_NAME = "Purple Laps";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,7 +399,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C63BB3A209192E1008EE12F /* Build configuration list for PBXProject "ClubspeedLapTimer" */ = {
+		5C63BB3A209192E1008EE12F /* Build configuration list for PBXProject "PurpleLaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C63BB4F209192E1008EE12F /* Debug */,
@@ -408,7 +408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C63BB51209192E1008EE12F /* Build configuration list for PBXNativeTarget "ClubspeedLapTimer" */ = {
+		5C63BB51209192E1008EE12F /* Build configuration list for PBXNativeTarget "PurpleLaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C63BB52209192E1008EE12F /* Debug */,

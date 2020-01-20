@@ -1,6 +1,6 @@
 //
 //  ViewModels.swift
-//  ClubspeedLapTimer
+//  PurpleLaps
 //
 //  Created by Mikhail Kalugin on 5/7/19.
 //  Copyright © 2019 Mikhail Kalugin. All rights reserved.
