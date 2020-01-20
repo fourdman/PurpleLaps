@@ -1,6 +1,6 @@
 # Purple Laps
 
-Purple Laps is an iOS app that can display your lap times (and some related info)
+Purple Laps is an iOS app that can display your lap times and related info
 when you race karts at LeMans Karting in Fremont, CA.
 
 The app uses the facility's live scores web page to get the data. Thus it's not
