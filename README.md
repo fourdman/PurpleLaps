@@ -4,7 +4,7 @@ Purple Laps is an iOS app that can display your lap times and related info
 when you race karts at LeMans Karting in Fremont, CA.
 
 The app uses the facility's live scores web page to get the data. Thus it's not
-a lap timer in a classic sense (like AiM MyChron). In particular, the your lap time
+a lap timer in a classic sense (like AiM MyChron). In particular, the lap time
 is only updated when you pass the start-finish line.
 
 # Release of Liability
