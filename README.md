@@ -27,3 +27,8 @@ position, and other driver's lap times.
 
 It's usually a good idea test the app prior to the session by selecting someone else's
 kart number from the visible leaderboard, and peaking at that kart's lap times.
+
+# Screenshots
+
+<img src="./Screenshots/MainScreen.png" width="320">
+<img src="./Screenshots/PracticeView1.png" width="320">
