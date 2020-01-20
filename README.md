@@ -30,5 +30,6 @@ kart number from the visible leaderboard, and peaking at that kart's lap times.
 
 # Screenshots
 
+<img src="./Screenshots/PracticeView1.png" width="640">
 <img src="./Screenshots/MainScreen.png" width="320">
-<img src="./Screenshots/PracticeView1.png" width="320">
+
