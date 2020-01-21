@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PracticeViewController" customModule="ClubspeedLapTimer" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PracticeViewController" customModule="Purple_Laps" customModuleProvider="target">
             <connections>
                 <outlet property="practiceView" destination="iN0-l3-epB" id="HT9-SY-o3B"/>
                 <outlet property="view" destination="HhI-OJ-gy8" id="kCx-bw-5BL"/>
@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PracticeView" customModule="ClubspeedLapTimer" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PracticeView" customModule="Purple_Laps" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -148,7 +148,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="behindsBestTimeLabel" destination="AYW-Ac-wFc" id="gBY-ng-GfL"/>
                         <outlet property="bestlapTimeLabel" destination="m4f-Kb-ecz" id="DVb-Zd-69v"/>

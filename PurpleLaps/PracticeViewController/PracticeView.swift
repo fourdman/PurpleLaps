@@ -40,7 +40,7 @@ public class PracticeView: UIView {
     if shouldBlink {
       self.backgroundColor = model.deltaDotsState.blinkColor
       Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
       }
     }
   }
@@ -54,18 +54,18 @@ fileprivate extension PracticeViewModel.DeltaDotsState {
     case .slower:
       return .red
     case .same:
-      return .black
+      return .gray
     }
   }
   
   var blinkColor: UIColor {
     switch self {
     case .faster:
-      return UIColor.init(red: 0, green: 1, blue: 0, alpha: 0.2)
+      return UIColor.green.withAlphaComponent(0.2)
     case .slower:
-      return UIColor.init(red: 1, green: 0, blue: 0, alpha: 0.2)
+      return UIColor.red.withAlphaComponent(0.2)
     case .same:
-      return .white
+      return .systemBackground
     }
   }
 }
