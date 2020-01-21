@@ -29,10 +29,10 @@ extension PracticeViewModel {
     position: Leaderboard.Position,
     trackName: String?
   ) {
-    lapNumber = "L\(position.lapNumber)"
+    lapNumber = "L \(position.lapNumber)"
     timeLeft = leaderboard.lapsLeft ?? "n/a"
 
-    self.position = "P\(position.position)"
+    self.position = "P \(position.position)"
     lastLapTime = position.lastLapTime
     bestLapTime = position.bestLapTime
 
@@ -79,6 +79,5 @@ fileprivate func formatDelta(_ delta: Float) -> String {
     return "NEW BEST"
   }
   let numDots = Int((abs(delta) / 0.1).rounded())
-  let numStr = String(format: "%.2f", delta)
-  return String(repeating:"◉ ", count: numDots) + "   \(numStr)"
+  return String(repeating:"◉ ", count: numDots)
 }

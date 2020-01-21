@@ -61,9 +61,9 @@ fileprivate extension PracticeViewModel.DeltaDotsState {
   var blinkColor: UIColor {
     switch self {
     case .faster:
-      return UIColor.green.withAlphaComponent(0.2)
+      return UIColor.purple.withAlphaComponent(0.5)
     case .slower:
-      return UIColor.red.withAlphaComponent(0.2)
+      return UIColor.red.withAlphaComponent(0.5)
     case .same:
       return .systemBackground
     }
