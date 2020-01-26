@@ -16,7 +16,7 @@ public struct Leaderboard {
     public let lastLapTime: String
     public let bestLapTime: String
     public let position: String
-    public let gap: String
+    public let gapToLeader: String
     public let lapNumber: String
   }
 

@@ -17,6 +17,7 @@
 		5C63BB5720919C3F008EE12F /* ClubspeedWebKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63BB5620919C3F008EE12F /* ClubspeedWebKitDataSource.swift */; };
 		5C63BB5A20919EC9008EE12F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C63BB5920919EC9008EE12F /* WebKit.framework */; };
 		5C63BB5C20928DFF008EE12F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63BB5B20928DFF008EE12F /* PracticeViewController.swift */; };
+		5C6A409323D75DD70021512E /* FakeClubspeedDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A409223D75DD70021512E /* FakeClubspeedDataSourceProvider.swift */; };
 		5CB32F4823D4E841003FD71E /* PracticeViewModel+Clubspeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB32F4723D4E841003FD71E /* PracticeViewModel+Clubspeed.swift */; };
 		5CE211822279629900BAD04A /* PracticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE211812279629900BAD04A /* PracticeView.xib */; };
 		5CE2118422796D8C00BAD04A /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2118322796D8C00BAD04A /* PracticeView.swift */; };
@@ -36,6 +37,7 @@
 		5C63BB5620919C3F008EE12F /* ClubspeedWebKitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubspeedWebKitDataSource.swift; sourceTree = "<group>"; };
 		5C63BB5920919EC9008EE12F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		5C63BB5B20928DFF008EE12F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		5C6A409223D75DD70021512E /* FakeClubspeedDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeClubspeedDataSourceProvider.swift; sourceTree = "<group>"; };
 		5CB32F4723D4E841003FD71E /* PracticeViewModel+Clubspeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeViewModel+Clubspeed.swift"; sourceTree = "<group>"; };
 		5CE211812279629900BAD04A /* PracticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeView.xib; sourceTree = "<group>"; };
 		5CE2118322796D8C00BAD04A /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		5C5B889423D4BA710050C89D /* Clubspeed */ = {
 			isa = PBXGroup;
 			children = (
+				5C6A409123D75DA70021512E /* Fake */,
 				5C5B88A223D4C8690050C89D /* Impl */,
 				5C5B88A123D4C8620050C89D /* API */,
 				5C5B889823D4BB4F0050C89D /* Model */,
@@ -146,6 +149,14 @@
 				5C63BB5920919EC9008EE12F /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C6A409123D75DA70021512E /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A409223D75DD70021512E /* FakeClubspeedDataSourceProvider.swift */,
+			);
+			path = Fake;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 				5C63BB43209192E1008EE12F /* AppDelegate.swift in Sources */,
 				5CE21186228292B800BAD04A /* PracticeViewModel.swift in Sources */,
 				5C5B88A023D4C29F0050C89D /* ClubspeedWebKitDataSourceProvider.swift in Sources */,
+				5C6A409323D75DD70021512E /* FakeClubspeedDataSourceProvider.swift in Sources */,
 				5C5B889723D4BB4C0050C89D /* Leaderboard.swift in Sources */,
 				5C63BB5720919C3F008EE12F /* ClubspeedWebKitDataSource.swift in Sources */,
 			);
@@ -373,6 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.PurpleLaps;
 				PRODUCT_NAME = "Purple Laps";
 				SWIFT_VERSION = 4.0;
@@ -393,6 +406,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.PurpleLaps;
 				PRODUCT_NAME = "Purple Laps";
 				SWIFT_VERSION = 4.0;

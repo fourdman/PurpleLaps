@@ -32,7 +32,7 @@ extension Leaderboard.Position {
     position = boardItemDict["Position"] as? String ?? "n/a"
     bestLapTime =  boardItemDict["BestLTime"] as? String ?? "n/a"
     racerName = boardItemDict["RacerName"] as? String ?? "n/a"
-    gap = boardItemDict["GapToLeader"] as? String ?? "n/a"
+    gapToLeader = boardItemDict["GapToLeader"] as? String ?? "n/a"
     lapNumber = boardItemDict["LapNum"] as? String ?? "n/a"
   }
 }

@@ -80,9 +80,13 @@ public class MainViewController: UITableViewController {
   }
   
   func presentPracticeViewController() {
+#if USE_FAKE_DATA
+    let clubspeedDataSourceProvider = FakeClubspeedDataSourceProvider()
+#else
     let clubspeedDataSourceProvider = ClubspeedWebKitDataSourceProviderImpl(
         webKitHostWindow: self.view.window!,
         trackNumber: trackNumber)
+#endif
     let vc = PracticeViewController(
         clubspeedDataSourceProvider: clubspeedDataSourceProvider,
         kartNumber: kartNumber)
