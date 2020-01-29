@@ -18,6 +18,10 @@
 		5C63BB5A20919EC9008EE12F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C63BB5920919EC9008EE12F /* WebKit.framework */; };
 		5C63BB5C20928DFF008EE12F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63BB5B20928DFF008EE12F /* PracticeViewController.swift */; };
 		5C6A409323D75DD70021512E /* FakeClubspeedDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A409223D75DD70021512E /* FakeClubspeedDataSourceProvider.swift */; };
+		5C6A409823E157E50021512E /* SpeechSynthesizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A409723E157E50021512E /* SpeechSynthesizerProtocol.swift */; };
+		5C6A409C23E15D910021512E /* ConsoleLoggingSpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A409B23E15D910021512E /* ConsoleLoggingSpeechSynthesizer.swift */; };
+		5C6A409E23E164B20021512E /* SystemSpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A409D23E164B20021512E /* SystemSpeechSynthesizer.swift */; };
+		5C6A40A023E168B40021512E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A409F23E168B40021512E /* AVFoundation.framework */; };
 		5CB32F4823D4E841003FD71E /* PracticeViewModel+Clubspeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB32F4723D4E841003FD71E /* PracticeViewModel+Clubspeed.swift */; };
 		5CE211822279629900BAD04A /* PracticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE211812279629900BAD04A /* PracticeView.xib */; };
 		5CE2118422796D8C00BAD04A /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2118322796D8C00BAD04A /* PracticeView.swift */; };
@@ -38,6 +42,10 @@
 		5C63BB5920919EC9008EE12F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		5C63BB5B20928DFF008EE12F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		5C6A409223D75DD70021512E /* FakeClubspeedDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeClubspeedDataSourceProvider.swift; sourceTree = "<group>"; };
+		5C6A409723E157E50021512E /* SpeechSynthesizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizerProtocol.swift; sourceTree = "<group>"; };
+		5C6A409B23E15D910021512E /* ConsoleLoggingSpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLoggingSpeechSynthesizer.swift; sourceTree = "<group>"; };
+		5C6A409D23E164B20021512E /* SystemSpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSpeechSynthesizer.swift; sourceTree = "<group>"; };
+		5C6A409F23E168B40021512E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5CB32F4723D4E841003FD71E /* PracticeViewModel+Clubspeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeViewModel+Clubspeed.swift"; sourceTree = "<group>"; };
 		5CE211812279629900BAD04A /* PracticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeView.xib; sourceTree = "<group>"; };
 		5CE2118322796D8C00BAD04A /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6A40A023E168B40021512E /* AVFoundation.framework in Frameworks */,
 				5C63BB5A20919EC9008EE12F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +142,7 @@
 		5C63BB41209192E1008EE12F /* PurpleLaps */ = {
 			isa = PBXGroup;
 			children = (
+				5C6A409423E157520021512E /* Audio */,
 				5C5B889523D4BA8A0050C89D /* App */,
 				5C5B889423D4BA710050C89D /* Clubspeed */,
 				5C5B889323D4BA180050C89D /* PracticeViewController */,
@@ -146,6 +156,7 @@
 		5C63BB5820919EC9008EE12F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C6A409F23E168B40021512E /* AVFoundation.framework */,
 				5C63BB5920919EC9008EE12F /* WebKit.framework */,
 			);
 			name = Frameworks;
@@ -157,6 +168,32 @@
 				5C6A409223D75DD70021512E /* FakeClubspeedDataSourceProvider.swift */,
 			);
 			path = Fake;
+			sourceTree = "<group>";
+		};
+		5C6A409423E157520021512E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A409623E157630021512E /* Impl */,
+				5C6A409523E1575E0021512E /* API */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		5C6A409523E1575E0021512E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A409723E157E50021512E /* SpeechSynthesizerProtocol.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5C6A409623E157630021512E /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A409B23E15D910021512E /* ConsoleLoggingSpeechSynthesizer.swift */,
+				5C6A409D23E164B20021512E /* SystemSpeechSynthesizer.swift */,
+			);
+			path = Impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,11 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6A409823E157E50021512E /* SpeechSynthesizerProtocol.swift in Sources */,
 				5CB32F4823D4E841003FD71E /* PracticeViewModel+Clubspeed.swift in Sources */,
 				5CE2118422796D8C00BAD04A /* PracticeView.swift in Sources */,
 				5C5B88A623D4CA7B0050C89D /* Leaderboard+JSON.swift in Sources */,
 				5C63BB45209192E1008EE12F /* MainViewController.swift in Sources */,
+				5C6A409E23E164B20021512E /* SystemSpeechSynthesizer.swift in Sources */,
 				5C63BB5C20928DFF008EE12F /* PracticeViewController.swift in Sources */,
+				5C6A409C23E15D910021512E /* ConsoleLoggingSpeechSynthesizer.swift in Sources */,
 				5C63BB43209192E1008EE12F /* AppDelegate.swift in Sources */,
 				5CE21186228292B800BAD04A /* PracticeViewModel.swift in Sources */,
 				5C5B88A023D4C29F0050C89D /* ClubspeedWebKitDataSourceProvider.swift in Sources */,
@@ -385,7 +425,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.PurpleLaps;
 				PRODUCT_NAME = "Purple Laps";
 				SWIFT_VERSION = 4.0;
@@ -406,7 +445,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailkalugin.PurpleLaps;
 				PRODUCT_NAME = "Purple Laps";
 				SWIFT_VERSION = 4.0;

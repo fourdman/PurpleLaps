@@ -87,9 +87,11 @@ public class MainViewController: UITableViewController {
         webKitHostWindow: self.view.window!,
         trackNumber: trackNumber)
 #endif
+    let speechSynthesis = ConsoleLoggingSpeechSynthesizer() // SystemSpeechSynthesizer()
     let vc = PracticeViewController(
         clubspeedDataSourceProvider: clubspeedDataSourceProvider,
-        kartNumber: kartNumber)
+        kartNumber: kartNumber,
+        speechSynthesis: speechSynthesis)
     self.present(vc, animated: true)
   }
 

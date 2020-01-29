@@ -14,15 +14,21 @@ public class PracticeViewController: UIViewController, ClubspeedWebKitDataSource
 
   private let kartNumber: Int
   private let clubspeedDataSourceProvider: ClubspeedWebKitDataSourceProvider
+  private let announcer: Announcer
   private var clubspeedDataSource: ClubspeedWebKitDataSourceProtocol?
   private var trackName: String?
   private var lastLeaderboard: Leaderboard?
   private var lastError: Error?
   private var hasSeenKartNumber = false
   
-  public init(clubspeedDataSourceProvider: ClubspeedWebKitDataSourceProvider, kartNumber: Int) {
+  public init(
+    clubspeedDataSourceProvider: ClubspeedWebKitDataSourceProvider,
+    kartNumber: Int,
+    speechSynthesis: SpeechSynthesizerProtocol
+  ) {
     self.clubspeedDataSourceProvider = clubspeedDataSourceProvider
     self.kartNumber = kartNumber
+    self.announcer = Announcer(speechSynthesis: speechSynthesis)
 
     super.init(nibName: nil, bundle: nil)
   
@@ -71,10 +77,14 @@ public class PracticeViewController: UIViewController, ClubspeedWebKitDataSource
     
     clubspeedDataSource?.stop()
     clubspeedDataSource = nil
+    
+    announcer.stop()
   }
   
   private func presentException(title: String, subtitle: String = "") {
     self.practiceView?.updateFromViewModel(PracticeViewModel.exception(title: title, subtitle: subtitle))
+    
+    announcer.announceText(title)
   }
   
   private func refresh() {
@@ -106,6 +116,8 @@ public class PracticeViewController: UIViewController, ClubspeedWebKitDataSource
     
     let viewModel = PracticeViewModel(leaderboard: leaderboard, position: position, trackName: trackName)
     self.practiceView?.updateFromViewModel(viewModel)
+    
+    announcer.announcePosition(position: position)
   }
   
   // MARK: ClubspeedWebKitDataSourceReceiver
@@ -133,3 +145,73 @@ public class PracticeViewController: UIViewController, ClubspeedWebKitDataSource
   }
 }
 
+fileprivate class Announcer {
+  private let speechSynthesis: SpeechSynthesizerProtocol
+  private var lastPosition: Leaderboard.Position?
+  private var lastSpokenText: String?
+  
+  init(speechSynthesis: SpeechSynthesizerProtocol) {
+    self.speechSynthesis = speechSynthesis
+  }
+  
+  func stop() {
+    speechSynthesis.stopImmediately()
+  }
+  
+  func announceText(_ text: String) {
+    guard self.lastSpokenText == nil || text != lastSpokenText! else {
+      return
+    }
+    
+    speechSynthesis.stopImmediately()
+    speechSynthesis.speak(string: text)
+    
+    self.lastSpokenText = text
+  }
+  
+  func announcePosition(position: Leaderboard.Position) {
+    if let textToSpeak = textToSpeakOnUpdate(position: position) {
+      announceText(textToSpeak)
+    }
+  }
+  
+  private func textToSpeakOnUpdate(position: Leaderboard.Position) -> String? {
+    guard let lapTimeF = Float(position.lastLapTime) else {
+      return nil
+    }
+    
+    var textToSpeak = ""
+    
+    if let previousBestLapTimeStr = lastPosition?.bestLapTime,
+       let previousBestLapTimeF = Float(previousBestLapTimeStr) {
+      let delta = lapTimeF - previousBestLapTimeF
+      let deltaInTenth = self.deltaInTenth(delta)
+      if deltaInTenth < 10 {
+        textToSpeak = "\(deltaInTenth) tenth "
+        if delta > 0 {
+          textToSpeak += "slower"
+        } else if delta < 0 {
+          textToSpeak = "best lap, " + textToSpeak + " faster"
+        } else {
+          textToSpeak = "same time"
+        }
+      } else {
+        textToSpeak += "\(String(format: "%.1f", lapTimeF)) seconds"
+      }
+    } else {
+      textToSpeak += "\(String(format: "%.1f", lapTimeF)) seconds"
+    }
+    
+    if lastPosition == nil || lastPosition!.position != position.position {
+      textToSpeak += ", you are now P \(position.position)"
+    }
+    
+    self.lastPosition = position
+    
+    return textToSpeak
+  }
+  
+  private func deltaInTenth(_ delta: Float) -> Int {
+    return Int((abs(delta) / 0.1).rounded())
+  }
+}
